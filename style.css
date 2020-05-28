@@ -1,0 +1,71 @@
+
+
+
+.select-container {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+
+  background-color: #fff;
+  border: #777 1px solid;
+  margin: 0 0 1.5em 0;
+  
+  overflow: hidden; 
+  /* 
+    Le select natif pourra 
+    dépasser sans être vu 
+  */
+}
+
+.select-container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 14px;
+
+  width: 110%; 
+  /* 
+    On est sûr de ne plus voir
+    la flèche native 
+  */
+  
+  height: auto;
+  border: 0; 
+  margin: 0;
+  padding: .75em;
+  border-radius: 0;
+  
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 
+    On empêche le texte d'aller
+    jusqu'au bout s'il est trop long
+  */
+
+}
+.select-container::after { 
+  /* Le pointeur du select */
+  content: '';
+  position: absolute;
+  top: 50%; 
+  margin-top: -3px;
+  right: .75em;  
+  display: block; 
+  width: 0; height: 0;
+  border-color: transparent;
+  border-top-color: #444; 
+  border-width: 6px;
+  border-style: solid;
+  pointer-events: none;
+}
+
+.slider-container{
+  position: absolute;
+  bottom: 35px;
+  left: 25px;
+  width : 38%;
+}
+
+
+

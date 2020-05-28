@@ -1,0 +1,75 @@
+<html>
+
+	<!--Header-->
+	<head>
+	    <meta charset="utf-8">
+
+	  	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	  	<title>Netherlands building types through the years</title>
+
+	  	<style>
+		    html, body, #viewDiv {
+		      padding: 0;
+		      margin: 0;
+		      height: 100%;
+		      width: 100%;
+		    }
+	  	</style>
+
+	  	<!--ArcGIS API (CSS Stylesheet and script)-->
+	  	<link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/css/main.css">
+	  	<script src="https://js.arcgis.com/4.15/"></script>
+
+	  	<!--CSS Stylesheet-->
+	  	<link rel="stylesheet" href="style.css">
+
+	  	<!--Plugin CSS file with desired skin for slider-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
+
+		<!--jQuery-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!--Plugin JavaScript file for slider-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+
+	  	<!--JS script-->
+	  	<script src=app.js></script>
+
+	</head>
+
+
+	<body>
+
+		<!--Map div-->
+	  	<div id="viewDiv"></div>
+
+
+	  		<!--Type of building selection container-->
+		  	<div class = "select-container">
+
+		  		<!--Type of building selector-->
+		      	<select id="optionsDiv" style="width:230px;">
+
+		      		<!--Each selection has a value used for a definitionExpression in the JS-->
+			        <option selected disabled value="1=1">Filter building by type:</option>
+			        <option value="1=1">All</option>
+			        <option value="Gebruiksdoel = 'bijeenkomstfunctie'">Bijeenkomstfunctie</option>
+			        <option value="Gebruiksdoel = 'gezondheidszorgfunctie'">Gezondheidszorgfunctie</option>
+			        <option value="Gebruiksdoel = 'industriefunctie'">Industriefunctie</option>
+			        <option value="Gebruiksdoel = 'kantoorfunctie'">Kantoorfunctie</option>
+			        <option value="Gebruiksdoel = 'logiesfunctie'">Logiesfunctie</option>
+			        <option value="Gebruiksdoel = 'overige gebruiksfunctie'">Overige gebruiksfunctie</option>
+			        <option value="Gebruiksdoel = 'sportfunctie'">Sportfunctie</option>
+			        <option value="Gebruiksdoel = 'winkelfunctie'">Winkelfunctie</option>
+			        <option value="Gebruiksdoel = 'woonfunctie'">Woonfunctie</option>
+
+		      	</select>
+		  	</div>
+		<!--Slider div-->
+		<div class = slider-container>
+			<input id="js-range-slider" name="my_range" value=""/>  
+		</div>
+	</body>
+
+</html>
